@@ -21,7 +21,7 @@ SourceCode : https://github.com/Chubbyboiz/Demo_Calligraphy/tree/master/eProject
 
 =======================================
 
-Published website : 
+Published website : https://chubbyboiz.github.io/Demo_Calligraphy/
 
 =======================================
 
