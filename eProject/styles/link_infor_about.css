@@ -1,0 +1,45 @@
+.item_img1{ grid-area: img1;}
+.item_infor1{ grid-area: infor1;}
+.item_img2{ grid-area: img2;}
+.item_infor2{ grid-area: infor2;}
+
+.grid_infor{
+  display: grid;
+  grid-template-areas: 
+    'img1 infor1'
+    'infor2 img2'
+  ;
+  gap: 0;
+  width: 100%;
+}
+.item_img1,
+.item_img2{
+  width: 80%;
+  margin: 30px auto 30px;
+}
+
+.item_infor1,
+.item_infor2{
+  width: 70%;
+  margin: 30px auto 30px;
+}
+.p3{
+  font-size: 1.5vw;
+  font-weight: 400;
+  line-height: 30px;
+  opacity: 0.6;
+}
+.p{
+  font-size: 2vw;
+  font-weight: 500;
+  line-height: 36px;
+  padding-top: 40px;
+}
+.infor a{
+  color: black;
+  transition: 0.2;
+}
+.infor a:hover{
+  color: black;
+  opacity: 0.8;
+}

@@ -1,0 +1,141 @@
+.p2{
+  font-size: 3.2vw;
+  line-height: 3.5vw;
+  font-weight: 700;
+  white-space: nowrap;
+}
+.title_img{
+  display: grid;
+  grid-template-columns: 50% 50%;
+  position: absolute;
+  top: 50%;
+  left: 5%;
+  right: 5%;
+  transform: translate(0%, -50%);
+  z-index: 10;
+  color: white;
+  text-align: center;
+}
+.text-title{
+  width: 100%;
+  margin: auto 0;
+}
+.img-title{
+  width: 80%;
+  margin: 30px auto;
+}
+.img-title img{
+  border-radius: 20px;
+}
+.imgg-title{
+  position: relative;
+}
+.main-img{
+  position: relative;
+}
+/*----------------------------------------------------------------------------*/
+.containerr_midle{
+  height: auto;
+}
+.containerr_home{
+  width: 90%;
+  margin: 0 auto;
+  height: auto;
+}
+.ppp{
+  font-size: 2vw;
+  font-weight: bold;
+  line-height: 36px;
+  padding: 40px 0;
+}
+.btn-start1{
+  display: inline-block;
+  background-color: white;
+  border-color: white;
+  color: black;
+  padding: 8px 16px;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: transform 0.3s;
+  animation: moveLeft 2.5s linear infinite , shine 2s ease-in-out infinite;
+}
+.btn-start1:hover{
+  text-decoration: none;
+  color: black;
+  transform: translateX(10px);
+}
+  @keyframes shine {
+    0%, 100% { box-shadow: 0px 0px 0px 0px rgba(255, 255, 225, 0.7);}
+    50% { box-shadow: 0px 0px 20px 5px rgba(255, 255, 225, 0.7);}
+  }
+  @keyframes moveLeft {
+    0%, 100% { transform: translateX(5px);}
+    50% { transform: translateX(-5px);}
+  }
+
+.containerr_course_home{
+  display: grid;
+  grid-template-columns: 22% 22% 22% 22%;
+  column-gap: 4%;
+}
+.title_course1{
+  text-align: center;
+  margin: 20px 0;
+  font-weight: 500;
+  font-size: 1.8vw;
+  color: black;
+}
+.title_course2{
+  font-weight: 400;
+  font-size: 1.5vw;
+  opacity: 0.5;
+  color: black;
+}
+.link_course{
+  text-decoration: none;
+  transition: 0.2s;
+}
+.link_course:hover{
+  text-decoration: none;
+  opacity: 0.6;
+}
+/*---------------------------------------------------------*/
+.containerr_gallery_home{
+  width: 90%;
+  margin: 0 auto;
+  height: auto;
+}
+.containerr_gallery{
+  display: grid;
+  grid-template-columns: 47.5% 47.5%;
+  column-gap: 5%;
+  height: auto;
+}
+.item_gallery{
+  margin: 30px 0;
+}
+.animation{
+  transition: 0.3s;
+}
+.animation:hover{
+  transform: scale(1.1);
+}
+.btn-start2{
+  display: inline-block;
+  background-color: black;
+  border-color: black;
+  color: white;
+  padding: 8px 16px;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: 0.2s;
+}
+.btn-start2:hover{
+  background-color: black;
+  border-color: black;
+  color: white;
+  opacity: 0.6;
+  text-decoration: none;
+}

@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/form.css">
+    <!--font-->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles/header.css">
+    <link rel="stylesheet" href="themify-icons-font/themify-icons/themify-icons.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script>
+        function kiemtra() {
+            //1. Full Name
+            var sFullname = document.getElementById("txtFullName").value;
+            var reFullName = /^[a-zA-Z ]+$/;
+            if (!reFullName.test(sFullname)) {
+                alert("Full Name field can't left blank!");
+                document.getElementById("txtFullName").focus();
+                return false;
+            }
+
+            //2. Mail
+            var sMail = document.getElementById("txtMail").value;
+            if (sMail.length == 0) {
+                alert("Email field can't left blank!");
+                document.getElementById("txtMail").focus();
+                return false;
+            }
+            var reMail = /^[a-zA-Z]\w+[@]\w+[.]\w{3}([.]\w{2})?$/;
+            if (!reMail.test(sMail)) {
+                alert("Email is incorrect!");
+                document.getElementById("txtMail").focus();
+                return false;
+            }
+
+            //3. Phone
+            var sPhone = document.getElementById("txtPhone").value;
+            if (sPhone.length == 0) {
+                alert("Phone field can't left blank!");
+                document.getElementById("txtPhone").focus();
+                return false;
+            }
+            var rePhone = /^[0]\d{8,12}$/;
+            if (!rePhone.test(sPhone)) {
+                alert("Phone number is incorrect!");
+                document.getElementById("txtPhone").focus();
+                return false;
+            }
+            
+            //4. Course
+            var sCourse = document.getElementById("txtCourse").value
+            if (sCourse != 0) {
+                document.getElementById("txtCourse").value;
+            } else {
+                alert("please choose the course");
+                document.getElementById("txtCourse").focus();
+                return false;
+            }
+
+            // 5. Start Date
+            // 5.1. Kiểm tra trống
+            var sDate = document.getElementById("txtDate").value
+            if (!sDate) {
+                alert("Start Date field can't left blank!");
+                document.getElementById("txtDate").focus();
+                return false;
+            }
+            //5.2. Kiểm tra ngày sau
+            var startDate = new Date(sDate);
+            var currentDate = new Date();
+            if (startDate <= currentDate) {
+                alert("The Start date should be later than Current date");
+                document.getElementById("txtDate").focus();
+                return false;
+            }
+            // var mes = [];
+            // mes.push(<h1>Thank you for your registration!</h1>);
+            // mes.push("We have received your message.");
+            // mes.push("We will reach you out immediately!");
+            // alert(mes.join("\n"));
+    
+        }
+    </script>
+    <title>Register</title>
+
+</head>
+<body>
+    <header>
+        <div class="containerr">
+            <div class="grid-containerr">
+              <div class="header1">
+                <div class="nav1">
+                  <a href="../index.html">Home</a>
+                  <a href="AboutUs.html">About us</a>
+                  <a href="Contact.html">Contact</a>
+                  <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="Category.html">Category<span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                      <li><a href="CategoryLearn.html">Learn</a></li>
+                      <li><a href="CategoryGallery.html">Gallery</a></li>
+                    </ul>
+                  </li>
+                </div>
+              </div>
+        
+              <div class="logo">
+                <div class="img_logo">
+                  <img width="100%" src="../images/logo.png" title="Logo">
+                </div>
+              </div>
+        
+              <div class="header2">
+                <div class="nav2">
+                  <div class="container_search">
+                    <div class="form_search">
+                        <form class="css_form" action="">
+                          <input class="search" type="search" placeholder="Search...">
+                        </form>
+                    </div>
+                  </div>
+        
+                  <div class="button_signup">
+                    <button class="css_up">Sign up</button>
+                  </div>
+                  <div class="button_signin">
+                    <button class="css_in">Sign in</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+    </header>
+    <section>
+        <div class="top-container">
+            <img src="../images/backgroundTitle.jpg" width="100%" class="picTitle">
+            <div><h1>Register for a course</h1></div>
+        </div>
+
+        <div class="gridBox">
+            <div class="grid-container">
+                <div class="item1" align="center" >
+                    <form action="ResgisterNotification.html" onsubmit="return kiemtra();">
+                        <table>
+                            <tr>
+                                <td>Full Name: </td>
+                                <td>
+                                    <input id="txtFullName" placeholder="Enter Full Name" autofocus>
+                                </td>
+                            </tr>
+    
+                            <tr>
+                                <td>Email:</td>
+                                <td>
+                                    <input id="txtMail" placeholder="Enter Email">
+                                </td>
+                            </tr>
+    
+                            <tr>
+                                <td>Phone:</td>
+                                <td>
+                                    <input id="txtPhone" placeholder="Enter telephone">
+                                </td>
+                            </tr>
+    
+                            <tr>
+                                <td>Course: </td>
+                                <td>
+                                    <select id="txtCourse" required>
+                                        <option value="">[-----select-----]</option>
+                                        <option value="Modern+Kit">Modern Calligraphy Class + Kit Bundle</option>
+                                        <option value="Brush+Kit">Brush Calligraphy Class + Kit Bundle</option>
+                                        <option value="Workshop">VIRTUAL Beginner Journaling Workshop</option>
+                                        <option value="Brush">Brush Calligraphy Class Calligraphy Class</option>
+                                        <option value="Chalk">Chalk Lettering with Skyler Chubak</option>
+                                        <option value="Hand-Lettering">Hand-Lettering Foundations Mini Class</option>
+                                        <option value="HoangDao">Spencerian with Hoang Dao</option>
+                                    </select>
+                                </td>
+                            </tr>
+    
+                            <tr>
+                                <td>Start date:</td>
+                                <td>
+                                    <input type="date" id="txtDate">
+                                </td>
+                            </tr>
+    
+                            <tr>
+                                <td>Note:</td>
+                                <td><textarea cols="auto" rows="auto" id="txtMessage"></textarea></td>
+                            </tr>
+    
+                            <tr>
+                                <td colspan="2" align="center">
+                                    <button type="submit">Register</button>
+                                    <button class="resetbtn" type="reset">reset</button>
+                                </td>
+                            </tr>
+                        </table>
+                    </form>
+                </div>
+                <div class="item2">
+                    <img id="resgistPic" src="../images/registration.jpg" width="100%"><br>
+                    <p id="resgistAssist"><a href="Contact.html">Contact us</a>, if you need any assistance!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <br>
+    <footer>
+        Copyright &copy; 2023 QuickCalligraphy
+    </footer>
+</body>
+</html>

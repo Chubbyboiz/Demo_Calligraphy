@@ -1,0 +1,126 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+footer {
+    position: relative;
+    bottom: 0;
+    text-align: center;
+    font-weight: 100;
+    color: black;
+    padding: 10px;
+}
+iframe{
+    width: 90%;
+    height: 200px;
+    border-radius: 10px;
+}
+
+.picTitle{
+    opacity: 0.7;
+    width: 100%;
+    color: white;
+    height: 400px;
+}
+.top-container{
+    position: relative;
+}
+.top-container div{
+    width: 100%;
+    position: absolute;
+    color: white;
+    top: 150px;
+    text-align: center;
+}
+
+.grid-container {
+    display: grid;
+    column-gap: 10px;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    width: 100%;
+}
+
+.grid-container-2 {
+    display: grid;
+    column-gap: 10px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    width: 100%;
+}
+
+.gridBox{
+    padding: 10px 10%;
+}
+.item a{
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+}
+
+.item img{
+    border-radius: 10px
+}
+
+.offline{
+    background-color: #f1f1f1;
+}
+
+#btn a{
+    display: block;
+    width: 120px;
+    padding: 5px 30px;
+    font-size: 20px;
+    background-color: #333333;
+    border-radius: 10px;
+    border: none;
+    color:white;
+    text-decoration: none;
+}
+#btn :hover{
+    background-color: #444444;
+}
+
+@media (max-width: 900px){
+    .item2 {
+        grid-template-areas:
+        'first first'
+        'last last'
+        'email email'
+        'phone phone'
+        'note note'
+        'send send';
+    }
+    .resgistPic{
+        border-radius: 10px;
+        position: relative;
+        top: 0;
+    }
+}
+
+@media (max-width: 500px){
+    .containerr h1{
+        position: absolute;
+        color: white;
+        top: 200px;
+        left: 25%;
+        font-size: 30px;
+    }
+    .containerr p{
+        position: absolute;
+        align-items: center;
+        color: white;
+        top: 280px;
+        left: 10%;
+    }
+}
+.p1{
+    font-size: 1.6vw;
+    line-height: 3vw;
+    font-weight: 700;
+    opacity: 0.7;
+  }
+.p2{
+    font-size: 4vw;
+    line-height: 3vw;
+    font-weight: 700;
+}

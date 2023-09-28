@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/form.css">
+    <!--font-->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles/header.css">
+    <link rel="stylesheet" href="themify-icons-font/themify-icons/themify-icons.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script>
+      function kiemtra() {
+          //1. Full Name
+          var sFirstName = document.getElementById("txtFirstName").value;
+          var reFirstName = /^[a-zA-Z ]+$/;
+          if (!reFirstName.test(sFirstName)) {
+              alert("First Name field can't left blank!");
+              document.getElementById("txtFirstName").focus();
+              return false;
+          }
+
+          //1. Full Name
+          var sLastName = document.getElementById("txtLastName").value;
+          var reLastName = /^[a-zA-Z ]+$/;
+          if (!reLastName.test(sLastName)) {
+              alert("Last Name field can't left blank!");
+              document.getElementById("txtLastName").focus();
+              return false;
+          }
+
+          //2. Mail
+          var sMail = document.getElementById("txtMail").value;
+          if (sMail.length == 0) {
+              alert("Email field can't left blank!");
+              document.getElementById("txtMail").focus();
+              return false;
+          }
+          var reMail = /^[a-zA-Z]\w+[@]\w+[.]\w{3}([.]\w{2})?$/;
+          if (!reMail.test(sMail)) {
+              alert("Email is incorrect!");
+              document.getElementById("txtMail").focus();
+              return false;
+          }
+
+          //3. Phone
+          var sPhone = document.getElementById("txtPhone").value;
+          if (sPhone.length == 0) {
+              alert("Phone field can't left blank!");
+              document.getElementById("txtPhone").focus();
+              return false;
+          }
+          var rePhone = /^[0]\d{8,12}$/;
+          if (!rePhone.test(sPhone)) {
+              alert("Phone number is incorrect!");
+              document.getElementById("txtPhone").focus();
+              return false;
+          }
+
+          var sMessage = document.getElementById("txtMessage").value;
+          if (sMessage.length == 0) {
+              alert("Give me your message!");
+              document.getElementById("txtMessage").focus();
+              return false;
+          }
+
+          // var mes = [];
+          // mes.push(<h1>Thank you for contacting us!</h1>);
+          // mes.push("We have received your message.");
+          // mes.push("We will reach you out immediately!");
+          // alert(mes.join("\n"));
+  
+      }
+  </script>
+    <title>Contact</title>
+</head>
+<body>
+    <header>
+      <div class="containerr">
+        <div class="grid-containerr">
+          <div class="header1">
+            <div class="nav1">
+              <a href="../index.html">Home</a>
+              <a href="AboutUs.html">About us</a>
+              <a href="Contact.html">Contact</a>
+              <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="Category.html">Category<span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                  <li><a href="CategoryLearn.html">Learn</a></li>
+                  <li><a href="CategoryGallery.html">Gallery</a></li>
+                </ul>
+              </li>
+            </div>
+          </div>
+    
+          <div class="logo">
+            <div class="img_logo">
+              <img width="100%" src="../images/logo.jpg" title="Logo">
+            </div>
+          </div>
+    
+          <div class="header2">
+            <div class="nav2">
+              <div class="container_search">
+                <div class="form_search">
+                  <form class="css_form" action="">
+                    <input class="search" type="search" placeholder="Search...">
+                  </form>
+                </div>
+              </div>
+    
+              <div class="button_signup">
+                <button class="css_up">Sign up</button>
+              </div>
+              <div class="button_signin">
+                <button class="css_in">Sign in</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <section>
+      <div class="top-container">
+        <img src="../images/backgroundTitle.jpg" width="100%" class="picTitle">
+        <div>
+          <p class="p2">Contact Us</p>
+          <p class="p1">Any question or remarks? Just write us a message!</p>
+        </div>
+      </div>
+    
+      <div class="gridBox">
+        <div class="grid-container">
+          <div class="item1">
+            <h2>Contact Information</h2>
+            <p><img src="../images/phone.png" height="13px"> 028-1234-5678</p>
+            <p><img src="../images/email.png" height="13px"> quickcalligraphy@gmail.com</p>
+            <p><img src="../images/address.png" height="13px"> Van Phuc City,
+              Hiep Binh Phuoc Ward, Thu Duc District, <br> Ho Chi Minh City</p>
+            <p><iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15674.418561116448!2d106.69953763350352!3d10.841537603826339!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3175286514783427%3A0x40ce9385750b3c3f!2zS2h1IMSRw7QgVGjhu4sgVuG6oW4gUGjDumMsIEhp4buHcCBCw6xuaCBQaMaw4bubYywgVGjhu6cgxJDhu6ljLCBUaMOgbmggcGjhu5EgSOG7kyBDaMOtIE1pbmgsIFZp4buHdCBOYW0!5e0!3m2!1svi!2s!4v1690467094828!5m2!1svi!2s"
+                width="100%" height="150" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe></p>
+          </div>
+          <form action="ContactNotification.html" onsubmit="return kiemtra();">
+            <div class="item2">
+              <div class="item3">
+                First name: <br>
+                <input id="txtFirstName">
+              </div>
+              <div class="item4">
+                Last name: <br>
+                <input id="txtLastName">
+              </div>
+              <div class="item5">
+                Email: <br>
+                <input id="txtMail">
+              </div>
+              <div class="item6">
+                Phone number: <br>
+                <input id="txtPhone">
+              </div>
+              <div class="item7">
+                How can we help you:<br>
+                <textarea width='auto' rows="auto" id="txtMessage"></textarea>
+              </div>
+              <div class="item8" align="center">
+                <button style="color: white;">Send</button>
+                <button class="resetbtn" type="reset">reset</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+    
+    <footer class="footer">
+      Copyright &copy; 2023 QuickCalligraphy
+    </footer>
+</body>
+</html>
