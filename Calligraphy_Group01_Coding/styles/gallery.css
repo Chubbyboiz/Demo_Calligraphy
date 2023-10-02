@@ -1,37 +1,24 @@
-.p2{
-  font-size: 3.2vw;
-  line-height: 3.5vw;
-  font-weight: 700;
-  white-space: nowrap;
-}
 .title_img{
-  display: grid;
-  grid-template-columns: 50% 50%;
-  position: absolute;
-  top: 50%;
-  left: 5%;
-  right: 5%;
-  transform: translate(0%, -50%);
-  z-index: 10;
-  color: white;
+  position: relative;
   text-align: center;
+  background-color: black;
 }
 .text-title{
-  width: 100%;
-  margin: auto 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  color: white;
+  white-space: nowrap;
 }
 .img-title{
-  width: 80%;
-  margin: 30px auto;
+  opacity: 0.5;
 }
-.img-title img{
-  border-radius: 20px;
-}
-.imgg-title{
-  position: relative;
-}
-.main-img{
-  position: relative;
+.p2{
+  font-size: 4vw;
+  line-height: 3vw;
+  font-weight: 700;
 }
 /*----------------------------------------------------------------------------*/
 .containerr_midle{
@@ -98,7 +85,6 @@
 }
 .link_course:hover{
   text-decoration: none;
-  opacity: 0.6;
 }
 /*---------------------------------------------------------*/
 .containerr_gallery_home{
@@ -138,4 +124,16 @@
   color: white;
   opacity: 0.6;
   text-decoration: none;
+}
+
+.item_course{
+  transition: 0.3s;
+}
+.item_course:hover{
+  transform: scale(1.1);
+  background-color: rgba(195, 195, 193, 0.7);
+  border-radius: 12px;
+}
+.link_course_img img{
+  border-radius: 12px;
 }
